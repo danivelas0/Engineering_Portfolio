@@ -587,25 +587,26 @@ export default function App() {
   };
 
   const handleLinkedInClick = (e: React.MouseEvent) => {
-    e.preventDefault();
     const profileId = "danielvelas";
     const webUrl = `https://www.linkedin.com/in/${profileId}/`;
     const appUrl = `linkedin://in/${profileId}`;
     
-    // Simple mobile detection
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     
     if (isMobile) {
-      // Try to open the LinkedIn app
+      e.preventDefault();
+      // Attempt to open the app
       window.location.href = appUrl;
       
-      // Fallback to web if the app doesn't open after a short delay
+      // Fallback to web if the page is still visible after a delay
+      // This avoids the 'popup blocked' error because we redirect in the same tab
       setTimeout(() => {
-        window.open(webUrl, '_blank');
-      }, 500);
-    } else {
-      window.open(webUrl, '_blank');
+        if (!document.hidden) {
+          window.location.href = webUrl;
+        }
+      }, 2000);
     }
+    // On desktop, the default link behavior (href + target="_blank") takes over
   };
 
   // Scroll to top when view changes
