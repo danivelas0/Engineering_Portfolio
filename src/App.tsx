@@ -779,38 +779,38 @@ export default function App() {
                     open: { opacity: 1, y: 0, transition: { delay: 0.4, duration: 0.5 } },
                     closed: { opacity: 0, y: 10, transition: { duration: 0.2 } }
                   }}
-                  className="flex gap-6 pt-6 border-t border-ink/10"
+                  className="flex flex-wrap gap-y-4 gap-x-6 pt-6 border-t border-ink/10"
                 >
                   <button 
                     onClick={() => {
                       toggleLang();
                       setIsMenuOpen(false);
                     }}
-                    className="flex items-center gap-3 text-ink hover:text-accent transition-colors pr-6 border-r border-ink/10"
+                    className="flex items-center gap-2 text-ink hover:text-accent transition-colors pr-4 border-r border-ink/10"
                   >
-                    <Globe size={24} />
-                    <span className="text-sm tracking-widest">{lang === 'en' ? 'Español' : 'English'}</span>
+                    <Globe size={22} />
+                    <span className="text-xs sm:text-sm tracking-widest flex-shrink-0">{lang === 'en' ? 'Español' : 'English'}</span>
                   </button>
                   <a 
                     href="https://www.linkedin.com/in/danielvelas/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-ink hover:text-accent transition-colors"
+                    className="flex items-center gap-2 text-ink hover:text-accent transition-colors"
                     onClick={(e) => {
                       handleLinkedInClick(e);
                       setIsMenuOpen(false);
                     }}
                   >
-                    <Linkedin size={24} />
-                    <span className="text-sm tracking-widest">{t.contact.linkedin}</span>
+                    <Linkedin size={22} />
+                    <span className="text-xs sm:text-sm tracking-widest flex-shrink-0">{t.contact.linkedin}</span>
                   </a>
                   <a 
                     href="mailto:services@velasquezdaniel.me" 
-                    className="flex items-center gap-3 text-ink hover:text-accent transition-colors"
+                    className="flex items-center gap-2 text-ink hover:text-accent transition-colors w-full sm:w-auto pt-2 sm:pt-0 sm:border-l sm:border-ink/10 sm:pl-4"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <Mail size={24} />
-                    <span className="text-sm tracking-widest">{t.contact.email}</span>
+                    <Mail size={22} />
+                    <span className="text-xs sm:text-sm tracking-widest flex-shrink-0">{t.contact.email}</span>
                   </a>
                 </motion.div>
               </motion.div>
