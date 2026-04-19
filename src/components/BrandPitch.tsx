@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, CheckCircle2, Zap, Shield, Target, Cylinder, DraftingCompass, Activity, ShieldCheck, Settings } from 'lucide-react';
-import refineryImg from '../assets/img/refinery.jpg';
-import profilePhoto from '../assets/PHOFILE PHOTO BLACK.png';
+
+const refineryImg = "/refinery.jpg";
+const profilePhoto = "/PHOFILE PHOTO BLACK.png";
 
 interface BrandPitchProps {
   onBack: () => void;
