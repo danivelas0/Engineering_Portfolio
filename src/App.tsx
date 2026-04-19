@@ -586,6 +586,28 @@ export default function App() {
     setLang(prev => prev === 'en' ? 'es' : 'en');
   };
 
+  const handleLinkedInClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const profileId = "danielvelas";
+    const webUrl = `https://www.linkedin.com/in/${profileId}/`;
+    const appUrl = `linkedin://in/${profileId}`;
+    
+    // Simple mobile detection
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+      // Try to open the LinkedIn app
+      window.location.href = appUrl;
+      
+      // Fallback to web if the app doesn't open after a short delay
+      setTimeout(() => {
+        window.open(webUrl, '_blank');
+      }, 500);
+    } else {
+      window.open(webUrl, '_blank');
+    }
+  };
+
   // Scroll to top when view changes
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -674,6 +696,7 @@ export default function App() {
             </a>
             <a 
               href="https://www.linkedin.com/in/danielvelas/" 
+              onClick={handleLinkedInClick}
               target="_blank" 
               rel="noopener noreferrer"
               className="text-ink hover:text-accent transition-colors flex items-center"
@@ -767,7 +790,10 @@ export default function App() {
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 text-ink hover:text-accent transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={(e) => {
+                      handleLinkedInClick(e);
+                      setIsMenuOpen(false);
+                    }}
                   >
                     <Linkedin size={24} />
                     <span className="text-sm tracking-widest">{t.contact.linkedin}</span>
@@ -1032,7 +1058,14 @@ export default function App() {
                     <a href="mailto:services@velasquezdaniel.me" aria-label="Send an email" className="bg-accent text-ink px-6 py-3 font-mono font-bold uppercase tracking-wider brutal-border hover:bg-paper transition-colors flex items-center gap-2">
                       <Mail size={18} aria-hidden="true" /> {t.contact.email}
                     </a>
-                    <a href="https://www.linkedin.com/in/danielvelas/" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile" className="bg-transparent text-paper px-6 py-3 font-mono font-bold uppercase tracking-wider border-2 border-paper hover:bg-paper hover:text-ink transition-colors flex items-center gap-2">
+                    <a 
+                      href="https://www.linkedin.com/in/danielvelas/" 
+                      onClick={handleLinkedInClick}
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      aria-label="Visit my LinkedIn profile" 
+                      className="bg-transparent text-paper px-6 py-3 font-mono font-bold uppercase tracking-wider border-2 border-paper hover:bg-paper hover:text-ink transition-colors flex items-center gap-2"
+                    >
                       <Linkedin size={18} aria-hidden="true" /> {t.contact.linkedin}
                     </a>
                   </div>
