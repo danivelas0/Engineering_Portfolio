@@ -595,10 +595,17 @@ export default function App() {
     
     if (isAndroid) {
       e.preventDefault();
-      // Native Android Intent URL format - forces hardware to query for the LinkedIn app
-      // Falls back automatically to the S.browser_fallback_url if the app is missing.
       const intentUrl = `intent://www.linkedin.com/in/${profileId}/#Intent;package=com.linkedin.android;scheme=https;S.browser_fallback_url=${encodeURIComponent(webUrl)};end`;
-      window.location.href = intentUrl;
+      
+      // Chrome on Android will block repeated 'window.location.href' assignments to identical intent strings
+      // to prevent loop abuse. Generating a fresh hidden link on each click bypasses this intent-cache limit.
+      const anchor = document.createElement("a");
+      anchor.href = intentUrl;
+      anchor.target = "_top";
+      anchor.rel = "noreferrer";
+      document.body.appendChild(anchor);
+      anchor.click();
+      document.body.removeChild(anchor);
     } else if (isIOS) {
       // On iOS Safari, target="_blank" frequently bypasses Universal Links and forces Safari instead.
       // Modifying it to "_self" just before the event resolves encourages the OS to open the app.
