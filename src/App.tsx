@@ -668,13 +668,7 @@ export default function App() {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
-            <button 
-              onClick={toggleLang}
-              className="mr-2 px-2 py-1 brutal-border border-ink bg-paper text-[10px] font-mono hover:bg-accent transition-colors"
-            >
-              {lang === 'en' ? 'ES' : 'EN'}
-            </button>
+          <div className="hidden lg:flex items-center gap-8">
             <a 
               href="#home" 
               onClick={(e) => {
@@ -719,14 +713,22 @@ export default function App() {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden p-2 text-ink hover:text-accent transition-colors"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Lang Toggle + Mobile Menu Button */}
+          <div className="flex items-center gap-4">
+            <button 
+              onClick={toggleLang}
+              className="px-2 py-1 brutal-border border-ink bg-paper text-[10px] font-mono hover:bg-accent transition-colors"
+            >
+              {lang === 'en' ? 'ES' : 'EN'}
+            </button>
+            <button 
+              className="lg:hidden p-2 text-ink hover:text-accent transition-colors"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile menu dropdown */}
@@ -737,7 +739,7 @@ export default function App() {
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="md:hidden bg-paper border-t-2 border-ink overflow-hidden brutal-shadow-sm origin-top"
+              className="lg:hidden bg-paper border-t-2 border-ink overflow-hidden brutal-shadow-sm origin-top"
             >
               <motion.div 
                 initial="closed"
@@ -781,16 +783,6 @@ export default function App() {
                   }}
                   className="flex flex-wrap gap-y-4 gap-x-6 pt-6 border-t border-ink/10"
                 >
-                  <button 
-                    onClick={() => {
-                      toggleLang();
-                      setIsMenuOpen(false);
-                    }}
-                    className="flex items-center gap-2 text-ink hover:text-accent transition-colors pr-4 border-r border-ink/10"
-                  >
-                    <Globe size={22} />
-                    <span className="text-xs sm:text-sm tracking-widest flex-shrink-0">{lang === 'en' ? 'Español' : 'English'}</span>
-                  </button>
                   <a 
                     href="https://www.linkedin.com/in/danielvelas/" 
                     target="_blank" 
