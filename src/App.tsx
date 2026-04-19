@@ -586,27 +586,25 @@ export default function App() {
     setLang(prev => prev === 'en' ? 'es' : 'en');
   };
 
-  const handleLinkedInClick = (e: React.MouseEvent) => {
+  const handleLinkedInClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     const profileId = "danielvelas";
     const webUrl = `https://www.linkedin.com/in/${profileId}/`;
-    const appUrl = `linkedin://in/${profileId}`;
     
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const isAndroid = /Android/i.test(navigator.userAgent);
+    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
     
-    if (isMobile) {
+    if (isAndroid) {
       e.preventDefault();
-      // Attempt to open the app
-      window.location.href = appUrl;
-      
-      // Fallback to web if the page is still visible after a delay
-      // This avoids the 'popup blocked' error because we redirect in the same tab
-      setTimeout(() => {
-        if (!document.hidden) {
-          window.location.href = webUrl;
-        }
-      }, 2000);
+      // Native Android Intent URL format - forces hardware to query for the LinkedIn app
+      // Falls back automatically to the S.browser_fallback_url if the app is missing.
+      const intentUrl = `intent://www.linkedin.com/in/${profileId}/#Intent;package=com.linkedin.android;scheme=https;S.browser_fallback_url=${encodeURIComponent(webUrl)};end`;
+      window.location.href = intentUrl;
+    } else if (isIOS) {
+      // On iOS Safari, target="_blank" frequently bypasses Universal Links and forces Safari instead.
+      // Modifying it to "_self" just before the event resolves encourages the OS to open the app.
+      e.currentTarget.target = "_self";
     }
-    // On desktop, the default link behavior (href + target="_blank") takes over
+    // On desktop, it bypasses both if-blocks and naturally uses <a target="_blank">
   };
 
   // Scroll to top when view changes
