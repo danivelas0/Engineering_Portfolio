@@ -39,6 +39,9 @@ export const ImageWithFallback = ({
 }: ImageWithFallbackProps & { children?: React.ReactNode }) => {
   const [status, setStatus] = useState<'loading' | 'loaded' | 'error'>('loading');
 
+  // Path-cleaning utility as requested
+  const cleanSrc = src.startsWith('/public/') ? src.replace('/public/', '/') : src;
+
   const handleLoad = () => {
     setStatus('loaded');
     if (onLoad) onLoad();
@@ -71,16 +74,19 @@ export const ImageWithFallback = ({
               backgroundSize: '20px 20px' 
             }} 
           />
-          <ImageOff size={errorIconSize} strokeWidth={1} className="mb-4 opacity-50" />
-          <div className="font-mono font-black text-[10px] md:text-xs uppercase tracking-[0.2em] border-y border-ink/20 py-1 px-4 text-center">
+          <ImageOff size={errorIconSize} strokeWidth={1} className="mb-2 opacity-50" />
+          <div className="font-mono font-black text-[10px] md:text-xs uppercase tracking-[0.2em] border-y border-ink/20 py-1 px-4 text-center z-10">
             Image Unavailable
+          </div>
+          <div className="mt-2 text-red-500/80 font-mono text-[9px] md:text-[10px] break-all max-w-[90%] leading-relaxed z-10 px-2 py-1 bg-grey/50 border border-red-500/20 rounded">
+            Path Attempted:<br/>{cleanSrc}
           </div>
           <div className="absolute bottom-4 left-4 right-4 h-[1px] bg-ink/5" />
           <div className="absolute top-4 left-4 right-4 h-[1px] bg-ink/5" />
         </div>
       ) : (
         <motion.img
-          src={src}
+          src={cleanSrc}
           alt={alt}
           onLoad={handleLoad}
           onError={handleError}
