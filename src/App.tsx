@@ -5,80 +5,80 @@ import { BrandPitch } from './components/BrandPitch';
 import { ProjectsPage } from './components/ProjectsPage';
 import { ProjectCard } from './components/ProjectCard';
 import { ProjectModal } from './components/ProjectModal';
-const refineryImg = '/refinery.jpg';
+const refineryImg = "/refinery.jpg";
 
-const proj4_img1 = '/img/Project_1/site_overview_1.jpg';
-const proj4_img2 = '/img/Project_1/site_overview_2.jpg';
-const proj4_img3 = '/img/Project_1/site_overview_3.jpg';
-const proj4_img4 = '/img/Project_1/site_overview_4.jpg';
-const proj4_img5 = '/img/Project_1/3d_model_1.png';
-const proj4_img6 = '/img/Project_1/3d_model_2.png';
-const proj4_img7 = '/img/Project_1/sp_1.png';
-const proj4_img8 = '/img/Project_1/sp_2.png';
-const proj4_img9 = '/img/Project_1/sp_3.png';
-const proj4_img10 = '/img/Project_1/sp_4.png';
-const proj4_img11 = '/img/Project_1/SP_5.png';
-const proj4_img12 = '/img/Project_1/SP_6.png';
-const proj4_img13 = '/img/Project_1/Modeling of heavy fuel oil piping in AutoPIPE..png';
-const proj4_img14 = '/img/Project_1/Summary of maximum stress results in the piping system..png';
-const proj4_img15 = '/img/Project_1/Maximum stress..png';
-const proj4_img16 = '/img/Project_1/Summary of Maximum Displacements..png';
-const proj4_img17 = '/img/Project_1/Maximum load for Hydrostatic test..png';
+const proj4_img1 = "/img/Project_1/site_overview_1.jpg";
+const proj4_img2 = "/img/Project_1/site_overview_2.jpg";
+const proj4_img3 = "/img/Project_1/site_overview_3.jpg";
+const proj4_img4 = "/img/Project_1/site_overview_4.jpg";
+const proj4_img5 = "/img/Project_1/3d_model_1.png";
+const proj4_img6 = "/img/Project_1/3d_model_2.png";
+const proj4_img7 = "/img/Project_1/sp_1.png";
+const proj4_img8 = "/img/Project_1/sp_2.png";
+const proj4_img9 = "/img/Project_1/sp_3.png";
+const proj4_img10 = "/img/Project_1/sp_4.png";
+const proj4_img11 = "/img/Project_1/SP_5.png";
+const proj4_img12 = "/img/Project_1/SP_6.png";
+const proj4_img13 = "/img/Project_1/Modeling of heavy fuel oil piping in AutoPIPE..png";
+const proj4_img14 = "/img/Project_1/Summary of maximum stress results in the piping system..png";
+const proj4_img15 = "/img/Project_1/Maximum stress..png";
+const proj4_img16 = "/img/Project_1/Summary of Maximum Displacements..png";
+const proj4_img17 = "/img/Project_1/Maximum load for Hydrostatic test..png";
 
-const proj5_img1 = '/img/Project_2/Failure History.png';
-const proj5_img2 = '/img/Project_2/Dampening Support.png';
-const proj5_img3 = '/img/Project_2/SP_1.png';
-const proj5_img4 = '/img/Project_2/SP_2.png';
-const proj5_img5 = '/img/Project_2/SP_3.png';
-const proj5_img6 = '/img/Project_2/DWG_4.png';
-const proj5_img7 = '/img/Project_2/DWG_5.png';
-const proj5_img8 = '/img/Project_2/3D_mODEL_1.png';
-const proj5_img9 = '/img/Project_2/New Piping Supports and loops in Green..png';
-const proj5_img10 = '/img/Project_2/New Piping Supports in Green..png';
-const proj5_img11 = '/img/Project_2/DWG_1.png';
-const proj5_img12 = '/img/Project_2/DWG_2.png';
-const proj5_img13 = '/img/Project_2/DWG_3.png';
-const proj5_img14 = '/img/Project_2/DWG_6.png';
-const proj5_img15 = '/img/Project_2/Piping 3D Model  8“-P-0301-UXE21-H2-H and 8”-P-0309-UXE21-H2-H..png';
-const proj5_img16 = '/img/Project_2/Pipe Model 12”-P-0302-LDX30-H2-H..png';
-const proj5_img17 = '/img/Project_2/Maximum stress applied to lines 8“-P-0301-UXE21-H2-H and 8”-P-0309-UXE21-H2-H..png';
-const proj5_img18 = '/img/Project_2/Maximum stress on line 12”-P-0302-LDX30-H2-H..png';
-const proj5_img19 = '/img/Project_2/Maximum displacement on lines 8“-P-0301-UXE21-H2-H and 8”-P-0309-UXE21-H2-H..png';
-const proj5_img20 = '/img/Project_2/Maximum displacement on line 12”-P-0302-LDX30-H2-H..png';
+const proj5_img1 = "/img/Project_2/Failure History.png";
+const proj5_img2 = "/img/Project_2/Dampening Support.png";
+const proj5_img3 = "/img/Project_2/SP_1.png";
+const proj5_img4 = "/img/Project_2/SP_2.png";
+const proj5_img5 = "/img/Project_2/SP_3.png";
+const proj5_img6 = "/img/Project_2/DWG_4.png";
+const proj5_img7 = "/img/Project_2/DWG_5.png";
+const proj5_img8 = "/img/Project_2/3D_mODEL_1.png";
+const proj5_img9 = "/img/Project_2/New Piping Supports and loops in Green..png";
+const proj5_img10 = "/img/Project_2/New Piping Supports in Green..png";
+const proj5_img11 = "/img/Project_2/DWG_1.png";
+const proj5_img12 = "/img/Project_2/DWG_2.png";
+const proj5_img13 = "/img/Project_2/DWG_3.png";
+const proj5_img14 = "/img/Project_2/DWG_6.png";
+const proj5_img15 = "/img/Project_2/Piping 3D Model  8“-P-0301-UXE21-H2-H and 8”-P-0309-UXE21-H2-H..png";
+const proj5_img16 = "/img/Project_2/Pipe Model 12”-P-0302-LDX30-H2-H..png";
+const proj5_img17 = "/img/Project_2/Maximum stress applied to lines 8“-P-0301-UXE21-H2-H and 8”-P-0309-UXE21-H2-H..png";
+const proj5_img18 = "/img/Project_2/Maximum stress on line 12”-P-0302-LDX30-H2-H..png";
+const proj5_img19 = "/img/Project_2/Maximum displacement on lines 8“-P-0301-UXE21-H2-H and 8”-P-0309-UXE21-H2-H..png";
+const proj5_img20 = "/img/Project_2/Maximum displacement on line 12”-P-0302-LDX30-H2-H..png";
 
-const proj6_img1 = '/img/Project_3/Piping System 3D model in AUTOPIPE.png';
-const proj6_img2 = '/img/Project_3/Maximum sustain stress Location at Node B06..png';
-const proj6_img3 = '/img/Project_3/Maximum Stress for Thermal Expansion at Node B05..png';
-const proj6_img4 = '/img/Project_3/Maximum Thermal Stress Location for vapor cleaning @160°C at Node B13..png';
-const proj6_img5 = '/img/Project_3/SP_1.png';
-const proj6_img6 = '/img/Project_3/Supports location at 4” Bypass Line..png';
+const proj6_img1 = "/img/Project_3/Piping System 3D model in AUTOPIPE.png";
+const proj6_img2 = "/img/Project_3/Maximum sustain stress Location at Node B06..png";
+const proj6_img3 = "/img/Project_3/Maximum Stress for Thermal Expansion at Node B05..png";
+const proj6_img4 = "/img/Project_3/Maximum Thermal Stress Location for vapor cleaning @160°C at Node B13..png";
+const proj6_img5 = "/img/Project_3/SP_1.png";
+const proj6_img6 = "/img/Project_3/Supports location at 4” Bypass Line..png";
 
-const proj7_img1 = '/img/Project_4/image.png';
-const proj7_img2 = '/img/Project_4/image 2.png';
-const proj7_img3 = '/img/Project_4/IMAGE 3.png';
-const proj7_img4 = '/img/Project_4/IMAGE 4.png';
-const proj7_img5 = '/img/Project_4/IMAGE 5.png';
-const proj7_img6 = '/img/Project_4/IMAGE 6.png';
-const proj7_img7 = '/img/Project_4/IMAGE 7.png';
-const proj7_img8 = '/img/Project_4/IMAGE 8.png';
-const proj7_img9 = '/img/Project_4/IMAGE 9.png';
-const proj7_img10 = '/img/Project_4/IMAGE 10.png';
+const proj7_img1 = "/img/Project_4/image.png";
+const proj7_img2 = "/img/Project_4/image 2.png";
+const proj7_img3 = "/img/Project_4/IMAGE 3.png";
+const proj7_img4 = "/img/Project_4/IMAGE 4.png";
+const proj7_img5 = "/img/Project_4/IMAGE 5.png";
+const proj7_img6 = "/img/Project_4/IMAGE 6.png";
+const proj7_img7 = "/img/Project_4/IMAGE 7.png";
+const proj7_img8 = "/img/Project_4/IMAGE 8.png";
+const proj7_img9 = "/img/Project_4/IMAGE 9.png";
+const proj7_img10 = "/img/Project_4/IMAGE 10.png";
 
-const proj8_img1 = '/img/Large-Scale_Vertical_Diesel_Storage_Tanks/Diesel Storage Tanks Location.png';
-const proj8_img2 = '/img/Large-Scale_Vertical_Diesel_Storage_Tanks/Design Parameters.png';
-const proj8_img3 = '/img/Large-Scale_Vertical_Diesel_Storage_Tanks/Diesel Storage Tank Predimensioning.png';
-const proj8_img4 = '/img/Large-Scale_Vertical_Diesel_Storage_Tanks/Shell- Summary of Results.png';
-const proj8_img5 = '/img/Large-Scale_Vertical_Diesel_Storage_Tanks/Roof - Summary of Results.png';
-const proj8_img6 = '/img/Large-Scale_Vertical_Diesel_Storage_Tanks/Structure - Summary of Results.png';
-const proj8_img7 = '/img/Large-Scale_Vertical_Diesel_Storage_Tanks/Bottom - Summary of Results.png';
-const proj8_img8 = '/img/Large-Scale_Vertical_Diesel_Storage_Tanks/Anchor Chair Design.png';
+const proj8_img1 = "/img/Large-Scale_Vertical_Diesel_Storage_Tanks/Diesel Storage Tanks Location.png";
+const proj8_img2 = "/img/Large-Scale_Vertical_Diesel_Storage_Tanks/Design Parameters.png";
+const proj8_img3 = "/img/Large-Scale_Vertical_Diesel_Storage_Tanks/Diesel Storage Tank Predimensioning.png";
+const proj8_img4 = "/img/Large-Scale_Vertical_Diesel_Storage_Tanks/Shell- Summary of Results.png";
+const proj8_img5 = "/img/Large-Scale_Vertical_Diesel_Storage_Tanks/Roof - Summary of Results.png";
+const proj8_img6 = "/img/Large-Scale_Vertical_Diesel_Storage_Tanks/Structure - Summary of Results.png";
+const proj8_img7 = "/img/Large-Scale_Vertical_Diesel_Storage_Tanks/Bottom - Summary of Results.png";
+const proj8_img8 = "/img/Large-Scale_Vertical_Diesel_Storage_Tanks/Anchor Chair Design.png";
 
-const proj9_img1 = '/img/Gasoline Storage Tank Battery/Gasoline 90 Storage Tanks Location.png';
-const proj9_img2 = '/img/Gasoline Storage Tank Battery/Gasoline 95 Storage Tanks Location.png';
-const proj9_img3 = '/img/Gasoline Storage Tank Battery/Gasoline 90 Storage Tank - Predimensioning.png';
-const proj9_img4 = '/img/Gasoline Storage Tank Battery/Gasoline 95 Storage Tank - Predimensioning.png';
-const proj9_img5 = '/img/Gasoline Storage Tank Battery/Design Parameters - Storage Tanks - T-004,005,006,007.png';
-const proj9_img6 = '/img/Gasoline Storage Tank Battery/Design Parameters - Storage Tanks - T-008.png';
+const proj9_img1 = "/img/Gasoline Storage Tank Battery/Gasoline 90 Storage Tanks Location.png";
+const proj9_img2 = "/img/Gasoline Storage Tank Battery/Gasoline 95 Storage Tanks Location.png";
+const proj9_img3 = "/img/Gasoline Storage Tank Battery/Gasoline 90 Storage Tank - Predimensioning.png";
+const proj9_img4 = "/img/Gasoline Storage Tank Battery/Gasoline 95 Storage Tank - Predimensioning.png";
+const proj9_img5 = "/img/Gasoline Storage Tank Battery/Design Parameters - Storage Tanks - T-004,005,006,007.png";
+const proj9_img6 = "/img/Gasoline Storage Tank Battery/Design Parameters - Storage Tanks - T-008.png";
 
 const JellyfishLogo = ({ className = "w-8 h-8" }: { className?: string }) => (
   <svg viewBox="0 0 100 100" className={`fill-current ${className}`} aria-hidden="true">
@@ -454,23 +454,23 @@ const projects = [
     tags: ['Flexibility Analysis', 'AutoPIPE'],
     icon: Cylinder,
     images: [
-      proj4_img1,
-      proj4_img2,
-      proj4_img3,
-      proj4_img4,
-      proj4_img5,
-      proj4_img6,
-      proj4_img7,
-      proj4_img8,
-      proj4_img9,
-      proj4_img10,
-      proj4_img11,
-      proj4_img12,
-      proj4_img13,
-      proj4_img14,
-      proj4_img15,
-      proj4_img16,
-      proj4_img17
+      { src: proj4_img1, caption: "Site Overview 1" },
+      { src: proj4_img2, caption: "Site Overview 2" },
+      { src: proj4_img3, caption: "Site Overview 3" },
+      { src: proj4_img4, caption: "Site Overview 4" },
+      { src: proj4_img5, caption: "3D Model 1" },
+      { src: proj4_img6, caption: "3D Model 2" },
+      { src: proj4_img7, caption: "Support Plan 1" },
+      { src: proj4_img8, caption: "Support Plan 2" },
+      { src: proj4_img9, caption: "Support Plan 3" },
+      { src: proj4_img10, caption: "Support Plan 4" },
+      { src: proj4_img11, caption: "Support Plan 5" },
+      { src: proj4_img12, caption: "Support Plan 6" },
+      { src: proj4_img13, caption: "Modeling of heavy fuel oil piping in AutoPIPE" },
+      { src: proj4_img14, caption: "Summary of maximum stress results" },
+      { src: proj4_img15, caption: "Maximum stress" },
+      { src: proj4_img16, caption: "Summary of Maximum Displacements" },
+      { src: proj4_img17, caption: "Maximum load for Hydrostatic test" }
     ],
     translationKey: 'proj4'
   },
