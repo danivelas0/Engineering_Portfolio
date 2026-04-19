@@ -1,0 +1,3 @@
+Force sync test
+Generated at: 2026-04-19 16:30:00
+Path: /public/assets_v2/force_sync.txt
