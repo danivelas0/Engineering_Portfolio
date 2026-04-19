@@ -9,14 +9,6 @@ interface BrandPitchProps {
   t: any;
 }
 
-const images = [
-  'https://ais-dev-fogdjtxizrwrpqjtzzzczt-437110491369.us-east1.run.app/api/attachments/1.png',
-  'https://ais-dev-fogdjtxizrwrpqjtzzzczt-437110491369.us-east1.run.app/api/attachments/2.png',
-  'https://ais-dev-fogdjtxizrwrpqjtzzzczt-437110491369.us-east1.run.app/api/attachments/3.png',
-  'https://ais-dev-fogdjtxizrwrpqjtzzzczt-437110491369.us-east1.run.app/api/attachments/4.png',
-  'https://ais-dev-fogdjtxizrwrpqjtzzzczt-437110491369.us-east1.run.app/api/attachments/5.png',
-  'https://ais-dev-fogdjtxizrwrpqjtzzzczt-437110491369.us-east1.run.app/api/attachments/6.png',
-];
 
 export const BrandPitch = ({ onBack, t }: BrandPitchProps) => {
   const scenarios = [
@@ -24,7 +16,7 @@ export const BrandPitch = ({ onBack, t }: BrandPitchProps) => {
       id: 'stress',
       title: t.scenarios.stress.title,
       subtitle: t.scenarios.stress.subtitle,
-      image: 'https://ais-dev-fogdjtxizrwrpqjtzzzczt-437110491369.us-east1.run.app/api/attachments/2.png',
+      image: "/img/Project_1/3d_model_1.png",
       icon: Cylinder,
       color: 'accent',
       desc: t.scenarios.stress.desc
@@ -33,7 +25,7 @@ export const BrandPitch = ({ onBack, t }: BrandPitchProps) => {
       id: 'tanks',
       title: t.scenarios.tanks.title,
       subtitle: t.scenarios.tanks.subtitle,
-      image: 'https://ais-dev-fogdjtxizrwrpqjtzzzczt-437110491369.us-east1.run.app/api/attachments/1.png',
+      image: "/img/Large-Scale_Vertical_Diesel_Storage_Tanks/Diesel Storage Tanks Location.png",
       icon: Shield,
       color: 'cyan',
       desc: t.scenarios.tanks.desc
@@ -42,7 +34,7 @@ export const BrandPitch = ({ onBack, t }: BrandPitchProps) => {
       id: 'retrofit',
       title: t.scenarios.retrofit.title,
       subtitle: t.scenarios.retrofit.subtitle,
-      image: 'https://ais-dev-fogdjtxizrwrpqjtzzzczt-437110491369.us-east1.run.app/api/attachments/5.png',
+      image: "/img/Project_4/image 2.png",
       icon: DraftingCompass,
       color: 'ink',
       desc: t.scenarios.retrofit.desc
