@@ -206,7 +206,7 @@ export const BrandPitch = ({ onBack, t }: BrandPitchProps) => {
                 {t.softwareTitle}
               </h3>
               <div className="flex flex-wrap gap-3">
-                {['AutoPIPE', 'Navisworks', 'AutoCAD Plant 3D', 'AMETANK', 'Autodesk Recap'].map((skill) => (
+                {['AutoPIPE', 'Navisworks', 'AutoCAD Plant 3D', 'AMETANK', 'Autodesk Recap', 'Python', 'Google AI studio', 'Visual Studio Code', 'Github'].map((skill) => (
                   <span key={skill} className="px-4 py-2 bg-paper brutal-border border-ink font-mono text-sm font-bold text-ink">
                     {skill}
                   </span>
@@ -225,7 +225,9 @@ export const BrandPitch = ({ onBack, t }: BrandPitchProps) => {
                   'Piping Stress Analysis',
                   'Storage Tank Design',
                   'ASME B31.3',
-                  'API 650 & API 620'
+                  'API 650 & API 620',
+                  'Vibe coding',
+                  'Software Development'
                 ].map((skill) => (
                   <span key={skill} className="px-4 py-2 bg-ink text-paper font-mono text-sm font-bold brutal-border border-ink">
                     {skill}
